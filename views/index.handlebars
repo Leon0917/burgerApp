@@ -1,5 +1,5 @@
 <div class="jumbotron">
-    <h1>Leon's Fastfoods</h1>
+    <h1>Eat-Da-Burger</h1>
 </div>
 
 <div class="container">
@@ -8,16 +8,18 @@
             {{#each burgers}}
             {{#unless this.devoured}}
             <p>{{this.name}}</p>
-            <button class="updateBurger" data-id={{this.id}}>Devoured</button>
+            <button class="updateBurger" data-id={{this.id}}>Devour it!</button>
             {{/unless}}
             {{/each}}
         </div>
+
+
         <div class="col-md-4">
             <h2>Add a Burger</h2>
             <form class="create-form">
 
                 <div class="form-group">
-                    <label for="burgerNmae">Burger Name:</label>
+                    <label for="burgerName">Burger Name:</label>
                     <input type="text" id="burgerName">
                 </div>
 
@@ -27,11 +29,13 @@
                     <input type="radio" name="devoured" value="0"> Eaten
                 </div>
 
-                <button class="addBurger" type="submit">Add Burger</button>
+                <button class="addBurger" type="submit">submit</button>
             </form>
 
         </div>
-        <div class="col-md-4">
+
+
+        <div class="col-md-4 burger-list">
             {{#each burgers}}
             {{#if this.devoured}}
             <p>{{this.name}}</p>
