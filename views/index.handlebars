@@ -8,7 +8,7 @@
             <h4>Burgers that are ready</h4>
             {{#each burgers}}
             {{#unless this.devoured}}
-            <p>{{this.name}}</p>
+            <p>{{this.NAME}}</p>
             <button class="updateBurger btn btn-dark" data-id={{this.id}}>Devour it!</button>
             {{/unless}}
             {{/each}}
@@ -40,7 +40,7 @@
             <h4>Burgers that have been devoured</h4>
             {{#each burgers}}
             {{#if this.devoured}}
-            <p>{{this.name}}</p>
+            <p>{{this.NAME}}</p>
             <button class="deleteBurger btn btn-dark" data-id={{this.id}}>Delete</button>
             {{/if}}
             {{/each}}
